@@ -1,6 +1,6 @@
 # Clarity
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/ntai0404/generated-app-20250926-142611)
 
 A visually stunning, minimalist To-Do application designed for focus and simplicity.
 
@@ -74,7 +74,7 @@ Deploying Clarity to Cloudflare is a simple, one-command process.
 2.  **Deploy with one click:**
     Alternatively, you can deploy this project directly to Cloudflare Workers using the button below.
 
-    [cloudflarebutton]
+    [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/ntai0404/generated-app-20250926-142611)
 
 ## Project Structure
 
