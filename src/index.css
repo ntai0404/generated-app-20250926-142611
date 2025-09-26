@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    /* Core Colors */
+    --background: 240 5% 96%; /* slate-100 */
+    --foreground: 240 10% 3.9%; /* slate-900 */
+    --primary: 221 83% 53%; /* blue-600 */
+    --primary-foreground: 0 0% 98%;
+    --muted: 240 5% 90%; /* slate-200 */
+    --muted-foreground: 240 4% 46%; /* slate-500 */
+    --border: 240 6% 90%; /* slate-200 */
+    --ring: 221 83% 53%; /* blue-600 */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 3.9%;
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 10% 3.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --input: 240 6% 90%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 240 10% 3.9%; /* slate-900 */
+    --foreground: 0 0% 98%; /* slate-50 */
+    --primary: 217 91% 60%; /* blue-500 */
+    --primary-foreground: 240 6% 10%;
+    --muted: 240 4% 16%; /* slate-800 */
+    --muted-foreground: 240 5% 65%; /* slate-400 */
+    --border: 240 4% 16%;
+    --ring: 217 91% 60%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 240 4% 16%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --input: 240 4% 16%;
+  }
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-gray-900 dark:text-gray-100;
+    min-height: 100vh;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    text-rendering: optimizeLegibility;
+  }
+  body::before {
+    content: '';
+    @apply fixed inset-0 -z-10 h-full w-full bg-white dark:bg-gray-950;
+    background-image: linear-gradient(to top, theme('colors.slate.50'), white), linear-gradient(to top, theme('colors.slate.50'), white);
+    background-image: -webkit-linear-gradient(to top, theme('colors.slate.50'), white), -webkit-linear-gradient(to top, theme('colors.slate.50'), white);
+    @apply dark:bg-gray-900;
+  }
+  .dark body::before {
+    background-image: linear-gradient(to bottom, theme('colors.gray.950'), theme('colors.gray.900')), linear-gradient(to bottom, theme('colors.gray.950'), theme('colors.gray.900'));
+    background-image: -webkit-linear-gradient(to bottom, theme('colors.gray.950'), theme('colors.gray.900')), -webkit-linear-gradient(to bottom, theme('colors.gray.950'), theme('colors.gray.900'));
+  }
+}
